@@ -10,6 +10,17 @@ public class Driver extends Frame
 {
 	public static void main(String[] args)
 	{
+		String s = "C[S[R]]";
+		StringTokenizer st = new StringTokenizer(s, "[]");
+		while(st.hasMoreTokens())
+		{
+			String part = st.nextToken();
+			if(!part.equals("]"))
+			{
+				System.out.println(part);
+			}
+		}
+		
 		Driver frame = new Driver();       
 	    frame.addWindowListener(
 	      new WindowAdapter()
@@ -23,6 +34,7 @@ public class Driver extends Frame
 	            
 	      frame.setSize(400, 400);
 	      frame.setVisible(true);
+	      
 	}
 	
 	public void paint(Graphics g) 
